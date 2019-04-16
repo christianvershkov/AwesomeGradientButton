@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "AwesomeGradientButton"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "UIButton subclass for adding and animating gradient colors"
   spec.homepage     = "https://github.com/christianvershkov/GradientButton"
   spec.license      = "MIT"
