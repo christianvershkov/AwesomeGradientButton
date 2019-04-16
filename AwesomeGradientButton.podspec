@@ -8,6 +8,6 @@ Pod::Spec.new do |spec|
   spec.author       = "Christian Vershkov"
   spec.platform     = :ios, "10.0"
   spec.source       = { :git => "https://github.com/christianvershkov/GradientButton.git", :tag => spec.version.to_s }
-  spec.source_files  = "GradientButton"
+  spec.source_files  = "GradientButton/Source/GradientButton.swift"
 
 end
