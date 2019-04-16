@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class GradientButton: UIButton {
+@IBDesignable public class AwesomeGradientButton: UIButton {
     
     @IBInspectable open var cornerRadius: CGFloat = 0 {
         didSet {
@@ -16,37 +16,37 @@ import UIKit
         }
     }
     
-    @IBInspectable var isCapsule: Bool = false {
+    @IBInspectable open var isCapsule: Bool = false {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var animationDuration: Double = 2 {
+    @IBInspectable open var animationDuration: Double = 2 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var startColor: UIColor = .clear {
+    @IBInspectable open var startColor: UIColor = .clear {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var endColor: UIColor = .clear {
+    @IBInspectable open var endColor: UIColor = .clear {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var startPoint: CGPoint = CGPoint(x: 0.0, y: 0.5) {
+    @IBInspectable open var startPoint: CGPoint = CGPoint(x: 0.0, y: 0.5) {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var endPoint: CGPoint = CGPoint(x: 1.0, y: 0.5) {
+    @IBInspectable open var endPoint: CGPoint = CGPoint(x: 1.0, y: 0.5) {
         didSet {
             setNeedsLayout()
         }
@@ -90,14 +90,14 @@ import UIKit
         animateGradient()
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         createGradient()
         updateGradient()
     }
 }
 
-private extension GradientButton {
+private extension AwesomeGradientButton {
     
     func updateGradient() {
         if isCapsule {
@@ -131,8 +131,8 @@ private extension GradientButton {
     }
 }
 
-extension GradientButton: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+extension AwesomeGradientButton: CAAnimationDelegate {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         guard flag else {
             return
         }
