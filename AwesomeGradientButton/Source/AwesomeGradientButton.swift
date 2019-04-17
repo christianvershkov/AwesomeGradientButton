@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable public class AwesomeGradientButton: UIButton {
+@IBDesignable open class AwesomeGradientButton: UIButton {
     
     @IBInspectable open var cornerRadius: CGFloat = 0 {
         didSet {
@@ -59,12 +59,12 @@ import UIKit
         static let key = "LocationsChange"
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         createGradient()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         createGradient()
     }
@@ -80,17 +80,17 @@ import UIKit
         return intrinsicContentSize
     }
     
-    func stopAnimation() {
+    open func stopAnimation() {
         gradient.removeAllAnimations()
     }
     
-    func startAnimation() {
+    open func startAnimation() {
         gradient.removeAllAnimations()
         updateGradient()
         animateGradient()
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         createGradient()
         updateGradient()
