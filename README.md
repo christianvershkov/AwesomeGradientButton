@@ -2,7 +2,7 @@
 
 UIButton subclass for adding and animating gradient colors.
 
-![Preview](https://github.com/Yalantis/Segmentio/blob/master/Assets/animation.gif)
+![Preview](https://github.com/christianvershkov/AwesomeGradientButton/blob/master/Animation.gif)
 
 ## Requirements
 
