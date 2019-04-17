@@ -44,11 +44,14 @@ add a `UIButton` instance in your .storyboard or .xib, set `AwesomeGradientButto
 @IBOutlet weak var gradientButton: AwesomeGradientButton!
 ```
 
-#### Setup `Segmentio`
+#### Setup `AwesomeGradientButton`
 ```swift
-gradientButton.isCapsule = true
+gradientButton.isCapsule = true OR gradientButton.cornerRadius = 20
 gradientButton.startColor = .red
 gradientButton.endColor = .blue
+gradientButton.startPoint = CGPoint(x: 0.0, y: 0.5)
+gradientButton.endPoint = CGPoint(x: 1.0, y: 0.5)
+gradientButton.animationDuration = 3
 ```
 
 #### Handling animation
